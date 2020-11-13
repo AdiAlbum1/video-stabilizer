@@ -14,12 +14,13 @@ Video Stabilization algorithm implementation using OpenCV
 git clone https://github.com/AdiAlbum1/video_stabilizer
 cd video_stabilizer
 pip install -r requirments.txt
-python stabilize_video.py
 ```
 
 ## Usage
 
-Make sure to download your video and change the path in code
+```sh
+python stabilize_video.py
+```
 
 ## Examples
 
