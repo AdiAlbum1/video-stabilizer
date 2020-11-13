@@ -1,6 +1,6 @@
 # Videos
-*.avi
-*.mp4
+videos/
+gifs/
 
 # Project files
 venv/
