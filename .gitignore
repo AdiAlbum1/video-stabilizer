@@ -1,0 +1,7 @@
+# Videos
+*.avi
+*.mp4
+
+# Project files
+venv/
+.idea/
