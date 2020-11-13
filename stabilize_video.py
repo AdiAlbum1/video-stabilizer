@@ -1,16 +1,7 @@
 import numpy as np
 import cv2
 import time
-
-# Parameters
-IN_VID_NAME = 'in_vid.avi'
-OUT_VID_NAME = 'out_vid.avi'
-
-warp_mode = cv2.MOTION_EUCLIDEAN
-warp_matrix = np.eye(2, 3, dtype=np.float32)
-number_of_iterations = 2
-termination_eps = 1e-10
-criteria = (cv2.TERM_CRITERIA_EPS | cv2.TERM_CRITERIA_COUNT, number_of_iterations,  termination_eps)
+from parameters import *
 
 # Input Video
 cap = cv2.VideoCapture(IN_VID_NAME)
@@ -20,9 +11,6 @@ n_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
 w = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
 h = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
 fps = int(cap.get(cv2.CAP_PROP_FPS))
-
-print("width = ", w)
-print("height = ", h)
 
 # Output Video
 fourcc = cv2.VideoWriter_fourcc('M','J','P','G')
