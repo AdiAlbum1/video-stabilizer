@@ -1,6 +1,6 @@
 # Video Stabilizer
 
-Video Stabilization Algorithm Implementation
+Video Stabilization algorithm implementation using OpenCV
 
 ## Table of Contents
 
