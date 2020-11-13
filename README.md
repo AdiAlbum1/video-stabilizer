@@ -1,1 +1,1 @@
-![](gifs/vid1/out_vid.gif)
+![](gifs/vid1/in_vid.gif)
