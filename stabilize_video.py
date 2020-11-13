@@ -3,7 +3,7 @@ import cv2
 import time
 
 # Parameters
-IN_VID_NAME = 'in_vid.mp4'
+IN_VID_NAME = 'in_vid.avi'
 OUT_VID_NAME = 'out_vid.avi'
 
 warp_mode = cv2.MOTION_EUCLIDEAN
