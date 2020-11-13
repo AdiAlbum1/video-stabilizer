@@ -13,7 +13,7 @@ Video Stabilization Algorithm Implementation
 ```sh
 git clone https://github.com/AdiAlbum1/video_stabilizer
 cd video_stabilizer
-pip install requirments.txt
+pip install -r requirments.txt
 python stabilize_video.py
 ```
 
