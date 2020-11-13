@@ -3,8 +3,8 @@ import cv2
 import time
 
 # Parameters
-IN_VID_NAME = 'vid.mp4'
-OUT_VID_NAME = 'out_vid.avi'
+IN_VID_NAME = 'videos/vid1/vid.mp4'
+OUT_VID_NAME = 'videos/vid1/output_vid.avi'
 
 warp_mode = cv2.MOTION_EUCLIDEAN
 warp_matrix = np.eye(2, 3, dtype=np.float32)
