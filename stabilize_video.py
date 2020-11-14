@@ -16,7 +16,6 @@ n_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
 w = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
 h = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
 fps = int(cap.get(cv2.CAP_PROP_FPS))
-print(fps)
 
 curr_state = State.SETUP
 count = 0
@@ -81,11 +80,6 @@ for i in range(n_frames-2):
 
         curr_aligned_image = cv2.warpAffine(curr_frame_gray, warp_matrix, (width, height),
                                             flags=cv2.INTER_LINEAR + cv2.WARP_INVERSE_MAP)
-
-        # # Once in a while, we would like to update base reference image
-        # if i % 30 == 0:
-        #     base_frame_gray = curr_aligned_image
-        #     warp_matrix = np.eye(2, 3, dtype=np.float32)
 
         curr_aligned_image = cv2.cvtColor(curr_aligned_image, cv2.COLOR_GRAY2BGR)
         curr_frame_gray = cv2.cvtColor(curr_frame_gray, cv2.COLOR_GRAY2BGR)
