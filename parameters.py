@@ -1,11 +1,19 @@
 import cv2
 import numpy as np
+from enum import Enum
 
-IN_VID_NAME = 'in_vid.avi'
+IN_VID_NAME = 'in_vid.mp4'
 OUT_VID_NAME = 'out_vid.avi'
 
 warp_mode = cv2.MOTION_EUCLIDEAN
 warp_matrix = np.eye(2, 3, dtype=np.float32)
-number_of_iterations = 2
+number_of_iterations = 8
 termination_eps = 1e-10
 criteria = (cv2.TERM_CRITERIA_EPS | cv2.TERM_CRITERIA_COUNT, number_of_iterations,  termination_eps)
+
+class State(Enum):
+    SETUP = 1
+    SELECT_ROI = 2
+    MARK_VERTICAL_POINTS = 3
+    STABILIZE = 4
+    END = 5
