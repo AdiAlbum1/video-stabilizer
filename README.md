@@ -22,6 +22,11 @@ pip install -r requirments.txt
 python stabilize_video.py
 ```
 
+1. press 'a' when you've setup and ready to go
+2. select Region of Interest, the rest of the image will be cropped out
+3. select number of points which should be veritcal, this is our global stablization point of view
+4. Enjoy the stable video
+
 ## Examples
 
 Shakey input video
