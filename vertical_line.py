@@ -1,4 +1,3 @@
-# importing the module
 import cv2
 from scipy.stats import linregress
 import math
