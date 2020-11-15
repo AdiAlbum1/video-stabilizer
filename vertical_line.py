@@ -1,6 +1,7 @@
 import cv2
 from scipy.stats import linregress
 import math
+import numpy as np
 
 class StoreCoordinates:
     def __init__(self):
@@ -25,8 +26,12 @@ def obtain_rotation_mat(image, points, inverse=False):
     y = [point[1] for point in points]
     line = linregress(X, y)
     slope = line.slope
-    angle = math.atan(slope)
 
+    if math.isnan(slope):
+        rotation_matrix = np.eye(2, 3, dtype=np.float32)
+        return rotation_matrix
+
+    angle = math.atan(slope)
     if angle < 0:
         angle += math.pi
 
