@@ -19,7 +19,7 @@ pip install -r requirments.txt
 ## Usage
 
 ```sh
-python stabilize_video.py
+python stabilize_video.py -i in_vid.mp4 -o out_vid.mp4
 ```
 
 1. press 'a' when you've setup and ready to go
