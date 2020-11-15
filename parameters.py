@@ -1,9 +1,16 @@
 import cv2
 import numpy as np
 from enum import Enum
+import argparse
 
-IN_VID_NAME = 'in_vid.mp4'
-OUT_VID_NAME = 'out_vid.avi'
+parser = argparse.ArgumentParser(description='Video Stabilization Algorithm implemented using OpenCV')
+parser.add_argument('-i', '--input', type=str, help='path to input video', default='in_vid.mp4')
+parser.add_argument('-o', '--output', type=str, help='path to output video', default='out_vid.mp4')
+
+args = parser.parse_args()
+
+IN_VID_NAME = args.input
+OUT_VID_NAME = args.output
 
 warp_mode = cv2.MOTION_EUCLIDEAN
 warp_matrix = np.eye(2, 3, dtype=np.float32)

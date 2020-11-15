@@ -1,5 +1,3 @@
-from email.mime import base
-
 import numpy as np
 import cv2
 import time
