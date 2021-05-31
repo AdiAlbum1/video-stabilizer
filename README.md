@@ -11,8 +11,8 @@ Video Stabilization algorithm implementation using OpenCV
 ## Installation
 
 ```sh
-git clone https://github.com/AdiAlbum1/video_stabilizer
-cd video_stabilizer
+git clone https://github.com/AdiAlbum1/video-stabilizer
+cd video-stabilizer
 pip install -r requirments.txt
 ```
 
